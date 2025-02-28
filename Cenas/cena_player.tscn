@@ -148,7 +148,7 @@ height = 14.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_1u5u5")
 animation = &"Baixo"
-frame_progress = 0.672929
+frame_progress = 0.328375
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 13)
