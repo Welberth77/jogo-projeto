@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="O Retorno de Tonho"
+run/main_scene="res://Cenas/cena_player.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
