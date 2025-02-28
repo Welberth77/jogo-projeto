@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Ignorar pastas temporárias e caches do Godot
+.import/
+export/
+*.cfg
+*.mono/
+
+# Arquivos de sistema (Windows/macOS/Linux)
+.DS_Store
+Thumbs.db
