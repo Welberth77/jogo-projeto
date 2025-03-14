@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="O Retorno de Tonho"
-run/main_scene="res://Cenas/cena_player.tscn"
+run/main_scene="res://Cenas/player.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+"<<<<<<<HEAD[display]window/size/viewport_width"=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
 
 [display]
 
