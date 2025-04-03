@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://1xx50mggh7ec"]
 
-[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_8mwi8"]
+[ext_resource type="Script" uid="uid://bvr1iuxabsebn" path="res://Scripts/CharacterBody2D.gd" id="1_8mwi8"]
 [ext_resource type="Texture2D" uid="uid://bbnhfu8qidql5" path="res://Assets/Sprites/Personagens/Tonho/Tonho.png" id="1_ly7fu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7x4x"]
@@ -376,15 +376,15 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l1wca"]
 _data = {
-"RESET": SubResource("Animation_ponls"),
-"idle_down": SubResource("Animation_3pu4s"),
-"idle_left": SubResource("Animation_48smv"),
-"idle_right": SubResource("Animation_3x25u"),
-"idle_up": SubResource("Animation_gek5n"),
-"walk_down": SubResource("Animation_hxb74"),
-"walk_left": SubResource("Animation_ndygr"),
-"walk_right": SubResource("Animation_feqsb"),
-"walk_up": SubResource("Animation_eoyc1")
+&"RESET": SubResource("Animation_ponls"),
+&"idle_down": SubResource("Animation_3pu4s"),
+&"idle_left": SubResource("Animation_48smv"),
+&"idle_right": SubResource("Animation_3x25u"),
+&"idle_up": SubResource("Animation_gek5n"),
+&"walk_down": SubResource("Animation_hxb74"),
+&"walk_left": SubResource("Animation_ndygr"),
+&"walk_right": SubResource("Animation_feqsb"),
+&"walk_up": SubResource("Animation_eoyc1")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8irdb"]
@@ -441,8 +441,10 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_nyyg7")
 states/walk/position = Vector2(389, 170)
 
 [node name="Cena Player" type="Node2D"]
+z_as_relative = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_animation_tree")]
+z_as_relative = false
 position = Vector2(0, -17)
 motion_mode = 1
 script = ExtResource("1_8mwi8")
@@ -464,7 +466,7 @@ shape = SubResource("CapsuleShape2D_j7x4x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 libraries = {
-"": SubResource("AnimationLibrary_l1wca")
+&"": SubResource("AnimationLibrary_l1wca")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="CharacterBody2D"]
