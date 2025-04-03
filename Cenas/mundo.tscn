@@ -314,6 +314,7 @@ script = ExtResource("1_g7i0b")
 
 [node name="player" parent="." instance=ExtResource("24_2q7kc")]
 z_index = 1
+z_as_relative = false
 position = Vector2(410, 183)
 
 [node name="arvore" parent="." instance=ExtResource("23_w2w7h")]

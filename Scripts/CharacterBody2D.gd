@@ -13,7 +13,10 @@ var _state_machine
 
 func _ready() -> void:
 	_state_machine = _animation_tree["parameters/playback"]
-	
+
+func _process(delta):
+	# Define o z_index baseado na posição Y
+	z_index = int(position.y)
 
 # Essa função é verificada a cada frame
 func _physics_process(_delta: float) -> void:
