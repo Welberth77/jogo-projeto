@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://pg4x6vd0dcjy"]
+
+[ext_resource type="Texture2D" uid="uid://c6bl5lpofojx3" path="res://Assets/Sprites1/Animais/Chicken/Chicken.png" id="1_mixex"]
+[ext_resource type="Texture2D" uid="uid://d0fcjmlgn5jvh" path="res://Assets/Sprites1/Animais/Cow/Cow.png" id="2_vc7e5"]
+[ext_resource type="Texture2D" uid="uid://b6gatqf33k61v" path="res://Assets/Sprites1/Animais/Pig/Pig.png" id="3_t1aj7"]
+[ext_resource type="Texture2D" uid="uid://dvkwd53gpihdp" path="res://Assets/Sprites1/Animais/Sheep/Sheep.png" id="4_aoejt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Chicken" type="Sprite2D" parent="."]
+position = Vector2(75, 61)
+texture = ExtResource("1_mixex")
+
+[node name="Cow" type="Sprite2D" parent="."]
+position = Vector2(74, 146)
+texture = ExtResource("2_vc7e5")
+
+[node name="Pig" type="Sprite2D" parent="."]
+position = Vector2(75, 230)
+texture = ExtResource("3_t1aj7")
+
+[node name="Sheep" type="Sprite2D" parent="."]
+position = Vector2(79, 310)
+texture = ExtResource("4_aoejt")
