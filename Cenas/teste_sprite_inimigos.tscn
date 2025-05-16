@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgutqsidh7wea"]
+
+[ext_resource type="Texture2D" uid="uid://c4p84frdytbpx" path="res://Assets/Sprites1/Inimigos/Goblin Sword Sprite Sheet 64x64.png" id="1_0hf0s"]
+[ext_resource type="Texture2D" uid="uid://brfhsmu3stj8l" path="res://Assets/Sprites1/Inimigos/Skeleton.png" id="2_8n3nl"]
+[ext_resource type="Texture2D" uid="uid://cfmjotglvej0l" path="res://Assets/Sprites1/Inimigos/Slime.png" id="3_kmdo1"]
+[ext_resource type="Texture2D" uid="uid://d30bpabh3yhav" path="res://Assets/Sprites1/Inimigos/Slime_Green.png" id="4_tnh3k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GoblinSwordSpriteSheet64x64" type="Sprite2D" parent="."]
+position = Vector2(231, 366)
+texture = ExtResource("1_0hf0s")
+
+[node name="Skeleton" type="Sprite2D" parent="."]
+position = Vector2(-125, 201)
+texture = ExtResource("2_8n3nl")
+
+[node name="Slime" type="Sprite2D" parent="."]
+position = Vector2(619, 86)
+texture = ExtResource("3_kmdo1")
+
+[node name="SlimeGreen" type="Sprite2D" parent="."]
+position = Vector2(756, 244)
+texture = ExtResource("4_tnh3k")
