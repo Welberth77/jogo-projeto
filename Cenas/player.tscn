@@ -390,13 +390,14 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(7, 5)
+size = Vector2(10, 7.5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_pmvhq")
 speed = 60
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
 texture = ExtResource("2_iersn")
 flip_h = true
 hframes = 6
@@ -408,5 +409,10 @@ libraries = {
 }
 
 [node name="Colision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, 14.75)
 shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_drag_margin = true

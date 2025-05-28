@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw2pp0fiy4q2u"]
+
+[ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_8owdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioo8j"]
+
+[node name="Arvore" instance=ExtResource("1_8owdw")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(0, 80, 48, 64)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 18)
+shape = SubResource("RectangleShape2D_ioo8j")

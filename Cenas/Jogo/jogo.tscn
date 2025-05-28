@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf46wsiyfugm8"]
+
+[ext_resource type="PackedScene" uid="uid://ce2ambw5lxmps" path="res://Cenas/cenario.tscn" id="1_vughy"]
+[ext_resource type="PackedScene" uid="uid://byymt6m4nhbdn" path="res://Cenas/player.tscn" id="2_sxcof"]
+[ext_resource type="PackedScene" uid="uid://cw2pp0fiy4q2u" path="res://Cenas/Objetos/arvore.tscn" id="3_b6nnt"]
+[ext_resource type="PackedScene" uid="uid://daoavmw1lw6mw" path="res://Cenas/Objetos/placa.tscn" id="4_8uv08"]
+[ext_resource type="PackedScene" uid="uid://bahvxsvm06owm" path="res://Cenas/Objetos/pedra.tscn" id="5_euh50"]
+[ext_resource type="PackedScene" uid="uid://gle6ov4mlyrp" path="res://Cenas/Objetos/tronco.tscn" id="6_lxoqi"]
+
+[node name="Jogo" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" parent="." instance=ExtResource("1_vughy")]
+
+[node name="Player" parent="." instance=ExtResource("2_sxcof")]
+z_index = 1
+
+[node name="Arvore" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(162, -32)
+
+[node name="Arvore2" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(40, 177)
+
+[node name="Arvore3" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(252, 120)
+
+[node name="Arvore4" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(133, 252)
+
+[node name="Arvore5" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(349, -26)
+
+[node name="Arvore6" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(349, -1)
+
+[node name="Arvore7" parent="." instance=ExtResource("3_b6nnt")]
+z_index = 1
+position = Vector2(349, 22)
+
+[node name="Placa" parent="." instance=ExtResource("4_8uv08")]
+z_index = 1
+position = Vector2(0, 90)
+
+[node name="Pedra" parent="." instance=ExtResource("5_euh50")]
+z_index = 1
+position = Vector2(59, 89)
+
+[node name="Tronco" parent="." instance=ExtResource("6_lxoqi")]
+z_index = 1
+position = Vector2(132, 89)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bahvxsvm06owm"]
+
+[ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_5btf4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l40pr"]
+size = Vector2(14, 11)
+
+[node name="Pedra" instance=ExtResource("1_5btf4")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_l40pr")
