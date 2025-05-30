@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bf46wsiyfugm8"]
+[gd_scene load_steps=8 format=3 uid="uid://bf46wsiyfugm8"]
 
 [ext_resource type="PackedScene" uid="uid://ce2ambw5lxmps" path="res://Cenas/cenario.tscn" id="1_vughy"]
 [ext_resource type="PackedScene" uid="uid://byymt6m4nhbdn" path="res://Cenas/player.tscn" id="2_sxcof"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://daoavmw1lw6mw" path="res://Cenas/Objetos/placa.tscn" id="4_8uv08"]
 [ext_resource type="PackedScene" uid="uid://bahvxsvm06owm" path="res://Cenas/Objetos/pedra.tscn" id="5_euh50"]
 [ext_resource type="PackedScene" uid="uid://gle6ov4mlyrp" path="res://Cenas/Objetos/tronco.tscn" id="6_lxoqi"]
+[ext_resource type="PackedScene" uid="uid://c88040vq0sims" path="res://Cenas/Objetos/caixa.tscn" id="7_8uv08"]
 
 [node name="Jogo" type="Node2D"]
 y_sort_enabled = true
@@ -54,3 +55,8 @@ position = Vector2(59, 89)
 [node name="Tronco" parent="." instance=ExtResource("6_lxoqi")]
 z_index = 1
 position = Vector2(132, 89)
+
+[node name="Caixa" parent="." instance=ExtResource("7_8uv08")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(55, 24)

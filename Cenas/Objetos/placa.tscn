@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_m3y5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3y5q"]
-size = Vector2(10, 11)
+size = Vector2(12, 11)
 
 [node name="Placa" instance=ExtResource("1_m3y5q")]
 

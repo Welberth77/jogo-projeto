@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_8owdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ioo8j"]
+size = Vector2(22, 20)
 
 [node name="Arvore" instance=ExtResource("1_8owdw")]
 
