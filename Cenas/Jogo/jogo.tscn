@@ -64,3 +64,4 @@ position = Vector2(55, 24)
 
 [node name="Slime" parent="." instance=ExtResource("8_euh50")]
 position = Vector2(165, 63)
+speed = 40

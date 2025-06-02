@@ -433,3 +433,5 @@ shape = SubResource("RectangleShape2D_4flbx")
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_drag_margin = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="on_animation_finished"]

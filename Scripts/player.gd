@@ -6,6 +6,8 @@ extends CharacterBody2D
 # Velocidade do personagem
 @export var speed: int = 200
 
+var can_die: bool = false
+
 var last_direction: String = "down"  # Direção inicial
 
 # essa função é verificada a cada frame, 60x por segundo
@@ -31,8 +33,18 @@ func move() -> void:
 
 # Função para a animação
 func animate() -> void:
-	if velocity != Vector2.ZERO:
+	if can_die:
+		animation.play("dead_right")
+		set_physics_process(false)
+	elif velocity != Vector2.ZERO:
 		animation.play("run_" + last_direction)
 	else:
 		animation.play("idle_" + last_direction)
 		
+func kill() -> void:
+	can_die = true
+	
+func on_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "dead_rigth":
+		var _reload: bool = get_tree().reload_current_scene()
+	
