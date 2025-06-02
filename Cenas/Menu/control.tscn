@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b875f1b78am3l"]
+
+[sub_resource type="SystemFont" id="SystemFont_yw4t7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_suxjh"]
+font = SubResource("SystemFont_yw4t7")
+font_size = 32
+font_color = Color(1, 0.279832, 0.322665, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 3.0
+offset_right = 624.0
+offset_bottom = 48.0
+text = "O Retorno de Tonho"
+label_settings = SubResource("LabelSettings_suxjh")
