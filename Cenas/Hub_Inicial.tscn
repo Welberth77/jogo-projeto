@@ -1,7 +1,5 @@
 [gd_scene load_steps=3 format=3 uid="uid://bj5iqmqr4j66o"]
 
-[ext_resource type="Texture2D" uid="uid://dnhsluehakkcc" path="res://Assets/Sprites/Cenário/Outside/Outside_1_1.png" id="1_hgdaw"]
-[ext_resource type="Texture2D" uid="uid://cg613ojmhv5sk" path="res://Assets/Sprites/Cenário/Outside/Outside_1_2.png" id="2_y55kn"]
 [ext_resource type="Texture2D" uid="uid://dnhsluehakkcc" path="res://Assets/Sprites1/Cenário/Outside/Outside_1_1.png" id="1_hgdaw"]
 [ext_resource type="Texture2D" uid="uid://cg613ojmhv5sk" path="res://Assets/Sprites1/Cenário/Outside/Outside_1_2.png" id="2_y55kn"]
 

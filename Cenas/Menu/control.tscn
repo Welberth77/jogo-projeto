@@ -1,25 +1,105 @@
-[gd_scene load_steps=3 format=3 uid="uid://b875f1b78am3l"]
+[gd_scene load_steps=5 format=3 uid="uid://b875f1b78am3l"]
 
-[sub_resource type="SystemFont" id="SystemFont_yw4t7"]
+[ext_resource type="FontFile" uid="uid://ds1ibvv0idpvu" path="res://Cenas/Menu/CCElephantmenGreat-Reg.otf" id="1_suxjh"]
+[ext_resource type="Texture2D" uid="uid://3krehhtye8ad" path="res://Assets/Sprites1/Cenário/Outside/Outside_21_1.png" id="1_vwt2n"]
+
+[sub_resource type="FontFile" id="FontFile_vwt2n"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_suxjh"]
-font = SubResource("SystemFont_yw4t7")
+font = ExtResource("1_suxjh")
 font_size = 32
-font_color = Color(1, 0.279832, 0.322665, 1)
+font_color = Color(0.575924, 0.356907, 0.18009, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
-[node name="Control" type="Control"]
-layout_mode = 3
+[node name="Texture" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vwt2n")
+expand_mode = 2
+
+[node name="Maginal" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 25
+
+[node name="Label" type="Label" parent="Maginal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("FontFile_vwt2n")
+text = "O Retorno de Tonho"
+label_settings = SubResource("LabelSettings_suxjh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Maginal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 313.0
-offset_top = 3.0
-offset_right = 624.0
-offset_bottom = 48.0
-text = "O Retorno de Tonho"
-label_settings = SubResource("LabelSettings_suxjh")
+[node name="Jogar" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447917
+anchor_top = 0.383333
+anchor_right = 0.545833
+anchor_bottom = 0.461111
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+text = "Jogar
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Opções" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447917
+anchor_top = 0.527778
+anchor_right = 0.545833
+anchor_bottom = 0.605556
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+text = "Opções
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sair" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.447917
+anchor_top = 0.662963
+anchor_right = 0.545833
+anchor_bottom = 0.740741
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+text = "Sair
+"
+metadata/_edit_use_anchors_ = true
