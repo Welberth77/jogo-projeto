@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-const PARTICLES: PackedScene = preload("res://Cenas/Player/run_particles.tscn")
-
 # Importando animações
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
@@ -38,8 +36,3 @@ func animate() -> void:
 	else:
 		animation.play("idle_" + last_direction)
 		
-# Ativar partículas de movimentação
-func instance_particles() -> void:
-	var particles = PARTICLES.instantiate()
-	get_tree().root.call_deferred("add_child", particles)
-	particles.global_position = global_position + Vector2(0, 16)
