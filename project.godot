@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="O Retorno de Tonho"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://ce2ambw5lxmps"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=384
-window/size/viewport_height=192
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/size/window_width_override=1152
 window/size/window_height_override=576
 window/stretch/mode="canvas_items"
