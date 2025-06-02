@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnrhoptkl00y8"]
+
+[ext_resource type="PackedScene" uid="uid://dgksd600mi2me" path="res://Cenas/Casas/casas.tscn" id="1_56p0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptae1"]
+size = Vector2(52, 20)
+
+[node name="Casa_da_floresta" instance=ExtResource("1_56p0h")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(16, 3936, 112, 96)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(6, -4.25)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-12, 34)
+shape = SubResource("RectangleShape2D_ptae1")
