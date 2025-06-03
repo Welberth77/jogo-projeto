@@ -1,11 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://bj5iqmqr4j66o"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://dnhsluehakkcc" path="res://Assets/Sprites1/Cenário/Outside/Outside_1_1.png" id="1_hgdaw"]
 [ext_resource type="Texture2D" uid="uid://cg613ojmhv5sk" path="res://Assets/Sprites1/Cenário/Outside/Outside_1_2.png" id="2_y55kn"]
 
 [node name="Hub" type="Control"]
 layout_mode = 3
 anchors_preset = 15
+=======
+[ext_resource type="Texture2D" uid="uid://dnhsluehakkcc" path="res://Assets/Sprites/Cenário/Outside/Outside_1_1.png" id="1_hgdaw"]
+[ext_resource type="Texture2D" uid="uid://cg613ojmhv5sk" path="res://Assets/Sprites/Cenário/Outside/Outside_1_2.png" id="2_y55kn"]
+
+[node name="Hub" type="Control"]
+layout_mode = 3
+>>>>>>> Stashed changes
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -92928.0
