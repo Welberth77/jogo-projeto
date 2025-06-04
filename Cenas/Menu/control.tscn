@@ -1,105 +1,70 @@
-[gd_scene load_steps=5 format=3 uid="uid://b875f1b78am3l"]
+[gd_scene load_steps=3 format=3 uid="uid://b875f1b78am3l"]
 
-[ext_resource type="FontFile" uid="uid://ds1ibvv0idpvu" path="res://Cenas/Menu/CCElephantmenGreat-Reg.otf" id="1_suxjh"]
+[ext_resource type="FontFile" uid="uid://cflvi8an5nnsb" path="res://Cenas/Menu/CCElephantmenAged-Regular.otf" id="1_suxjh"]
 [ext_resource type="Texture2D" uid="uid://3krehhtye8ad" path="res://Assets/Sprites1/Cenário/Outside/Outside_21_1.png" id="1_vwt2n"]
 
-[sub_resource type="FontFile" id="FontFile_vwt2n"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_suxjh"]
-font = ExtResource("1_suxjh")
-font_size = 32
-font_color = Color(0.575924, 0.356907, 0.18009, 1)
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-
-[node name="Texture" type="TextureRect"]
+[node name="Control" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_vwt2n")
-expand_mode = 2
 
-[node name="Maginal" type="MarginContainer" parent="."]
+[node name="Label" type="Label" parent="."]
+layout_direction = 1
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.5
+offset_top = 50.0
+offset_right = 172.5
+offset_bottom = 90.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_top = 25
-
-[node name="Label" type="Label" parent="Maginal"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_fonts/font = SubResource("FontFile_vwt2n")
+theme_override_fonts/font = ExtResource("1_suxjh")
+theme_override_font_sizes/font_size = 100
 text = "O Retorno de Tonho"
-label_settings = SubResource("LabelSettings_suxjh")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Maginal"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Jogar" type="Button" parent="Control"]
+[node name="Jogar" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.447917
-anchor_top = 0.383333
-anchor_right = 0.545833
-anchor_bottom = 0.461111
+anchor_left = 0.465104
+anchor_top = 0.473148
+anchor_right = 0.536458
+anchor_bottom = 0.526852
+offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 24
-text = "Jogar
-"
+theme_override_font_sizes/font_size = 36
+text = "Jogar"
 metadata/_edit_use_anchors_ = true
 
-[node name="Opções" type="Button" parent="Control"]
+[node name="Opções" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.447917
-anchor_top = 0.527778
-anchor_right = 0.545833
-anchor_bottom = 0.605556
+anchor_left = 0.47474
+anchor_top = 0.57037
+anchor_right = 0.52526
+anchor_bottom = 0.624074
+offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 24
-text = "Opções
-"
+theme_override_font_sizes/font_size = 36
+text = "Opções"
 metadata/_edit_use_anchors_ = true
 
-[node name="Sair" type="Button" parent="Control"]
+[node name="Sair" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.447917
-anchor_top = 0.662963
-anchor_right = 0.545833
-anchor_bottom = 0.740741
+anchor_left = 0.464063
+anchor_top = 0.663889
+anchor_right = 0.536979
+anchor_bottom = 0.717593
+offset_right = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "Sair
 "
 metadata/_edit_use_anchors_ = true
