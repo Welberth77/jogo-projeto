@@ -14,6 +14,12 @@ y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_vughy")]
 
+[node name="Slime" parent="." instance=ExtResource("8_euh50")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(165, 63)
+speed = 40
+
 [node name="Player" parent="." instance=ExtResource("2_sxcof")]
 z_index = 1
 
@@ -62,6 +68,20 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(55, 24)
 
-[node name="Slime" parent="." instance=ExtResource("8_euh50")]
-position = Vector2(165, 63)
-speed = 40
+[node name="Slime2" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(403, 102)
+
+[node name="Slime3" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(39, 306)
+
+[node name="Slime4" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(319, 296)
+
+[node name="Slime5" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(216, 217)
+
+[node name="Slime6" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(815, 52)
+
+[node name="Slime7" parent="." instance=ExtResource("8_euh50")]
+position = Vector2(798, 227)

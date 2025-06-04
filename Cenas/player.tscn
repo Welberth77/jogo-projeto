@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://byymt6m4nhbdn"]
+[gd_scene load_steps=21 format=3 uid="uid://byymt6m4nhbdn"]
 
 [ext_resource type="Script" uid="uid://bq38hapo7p60d" path="res://Scripts/player.gd" id="1_pmvhq"]
 [ext_resource type="Texture2D" uid="uid://cipssbjd4hgfr" path="res://Assets/sprites2/characters/player.png" id="2_iersn"]
@@ -24,6 +24,30 @@ tracks/1/path = NodePath("Sprite2D:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -101,6 +125,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_2hs0m"]
 resource_name = "attack_up"
@@ -120,7 +156,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_bwjto"]
 resource_name = "dead_left"
-length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -145,10 +180,21 @@ tracks/1/keys = {
 "update": 1,
 "values": [54, 55, 56]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_urp6f"]
 resource_name = "dead_right"
-length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -172,6 +218,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.302796, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4flbx"]
@@ -409,6 +467,8 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(10, 7.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmvhq"]
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_pmvhq")
 speed = 60
@@ -433,5 +493,13 @@ shape = SubResource("RectangleShape2D_4flbx")
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_drag_margin = true
+
+[node name="AttackArea" type="Area2D" parent="." groups=["player_attack"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(19, 8)
+shape = SubResource("RectangleShape2D_pmvhq")
+disabled = true
+debug_color = Color(0.849164, 0, 0.0262597, 0.419608)
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="on_animation_finished"]

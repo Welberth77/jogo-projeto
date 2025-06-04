@@ -2,8 +2,10 @@ extends CharacterBody2D
 
 @onready var animation: AnimationPlayer = get_node("AnimationPlayer")
 @onready var sprite: Sprite2D = get_node("Sprite2D")
-var player_ref: Node2D = null
 @export var speed: int = 60
+
+var player_ref: Node2D = null
+var can_die: bool = false
 
 func _physics_process(_delta: float) -> void:
 	move()
@@ -27,7 +29,10 @@ func move() -> void:
 	move_and_slide()
 
 func animate() -> void:
-	if velocity != Vector2.ZERO:
+	if can_die:
+		animation.play("dead")
+		set_physics_process(false)
+	elif velocity != Vector2.ZERO:
 		animation.play("walk")
 	else:
 		animation.play("idle")
@@ -46,3 +51,13 @@ func on_body_entered(body: Node2D) -> void:
 func on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_ref = null
+
+
+func kill(area: Area2D) -> void:
+	if area.is_in_group("player_attack"):
+		can_die = true
+
+
+func on_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "dead":
+		queue_free()
