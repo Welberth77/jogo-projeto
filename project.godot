@@ -15,10 +15,7 @@ run/main_scene="res://Cenas/cena_player.tscn"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.svg"
 Stashedchangesconfig/features=PackedStringArray("4.4", "Forward Plus")
-<<<<<<< Updated upstream
 <<<<<<<Updatedupstreamconfig/features=PackedStringArray("4.4", "Forward Plus")
-=======
->>>>>>> Stashed changes
 
 [display]
 
