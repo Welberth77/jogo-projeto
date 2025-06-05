@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://qo1owrra3jwq" path="res://Assets/Sprites3/Houses Sprite Sheet.png" id="1_x8grn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8grn"]
-size = Vector2(88, 56.5)
+size = Vector2(88, 63)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 

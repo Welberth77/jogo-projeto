@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu740n8r20h0n"]
+
+[ext_resource type="Texture2D" uid="uid://dmn3hu4yquhbj" path="res://Assets/sprite_items/PNG/13.png" id="1_pbf4i"]
+[ext_resource type="Script" uid="uid://dn2q1s14r25op" path="res://Cenas/objetos_coletaveis/maca.gd" id="1_xmt0d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xmt0d"]
+radius = 7.0
+
+[node name="maca" type="Area2D"]
+script = ExtResource("1_xmt0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pbf4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_xmt0d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
