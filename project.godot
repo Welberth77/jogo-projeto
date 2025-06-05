@@ -1,10 +1,6 @@
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
 
 config_version=5
 
@@ -12,16 +8,8 @@ config_version=5
 
 config/name="O Retorno de Tonho"
 run/main_scene="res://Cenas/cena_player.tscn"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-Stashedchangesconfig/features=PackedStringArray("4.4", "Forward Plus")
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<<Updatedupstreamconfig/features=PackedStringArray("4.4", "Forward Plus")
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 [display]
 
