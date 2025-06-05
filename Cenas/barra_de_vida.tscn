@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://crqwju1r8hoe6"]
+
+[ext_resource type="Script" uid="uid://bflg28ae7lcog" path="res://Cenas/barra_de_vida.gd" id="1_57h7y"]
+
+[sub_resource type="GDScript" id="GDScript_uag4n"]
+script/source = "extends CanvasLayer
+
+@onready var health_bar: TextureProgressBar = $HealthBar
+
+func update_health(current: int, max_health: int) -> void:
+	health_bar.max_value = max_health
+	health_bar.value = current
+	
+	# Muda a cor conforme a vida diminui
+	if current < max_health * 0.3:  # Menos de 30%
+		health_bar.tint_progress = Color(1, 0, 0)  # Vermelho
+	elif current < max_health * 0.6:  # Menos de 60%
+		health_bar.tint_progress = Color(1, 1, 0)  # Amarelo
+	else:
+		health_bar.tint_progress = Color(0, 1, 0)  # Verde
+"
+
+[sub_resource type="Gradient" id="Gradient_57h7y"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uag4n"]
+gradient = SubResource("Gradient_57h7y")
+width = 40
+height = 8
+
+[sub_resource type="Gradient" id="Gradient_g4vse"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.905882, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bijb1"]
+gradient = SubResource("Gradient_g4vse")
+width = 40
+height = 8
+
+[node name="BarraDeVida" type="CanvasLayer"]
+script = SubResource("GDScript_uag4n")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 8.0
+texture_under = SubResource("GradientTexture2D_uag4n")
+texture_progress = SubResource("GradientTexture2D_bijb1")
+script = ExtResource("1_57h7y")
