@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://bf46wsiyfugm8"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://bf46wsiyfugm8"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://ce2ambw5lxmps" path="res://Cenas/cenario.tscn" id="1_vughy"]
 [ext_resource type="PackedScene" uid="uid://cw2pp0fiy4q2u" path="res://Cenas/Objetos/arvore.tscn" id="3_b6nnt"]
@@ -10,13 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bahvxsvm06owm" path="res://Cenas/Objetos/pedra.tscn" id="5_euh50"]
 [ext_resource type="PackedScene" uid="uid://gle6ov4mlyrp" path="res://Cenas/Objetos/tronco.tscn" id="6_lxoqi"]
 [ext_resource type="PackedScene" uid="uid://c88040vq0sims" path="res://Cenas/Objetos/caixa.tscn" id="7_8uv08"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bu740n8r20h0n" path="res://Cenas/objetos_coletaveis/maca.tscn" id="9_lxoqi"]
-=======
-[ext_resource type="PackedScene" uid="uid://cuux1382g5i2j" path="res://Cenas/slime.tscn" id="8_euh50"]
-[ext_resource type="PackedScene" uid="uid://bu740n8r20h0n" path="res://Cenas/objetos_coletaveis/maca.tscn" id="9_lxoqi"]
-[ext_resource type="PackedScene" uid="uid://buulmpn0tgin7" path="res://Cenas/objetos_coletaveis/porção_verde.tscn" id="9_y3x1s"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://cnrhoptkl00y8" path="res://Cenas/Casas/casa_da_floresta.tscn" id="10_vf1mf"]
 [ext_resource type="PackedScene" uid="uid://b2j71vpa1hy66" path="res://Cenas/objetos_coletaveis/chave.tscn" id="12_74iv7"]
 
@@ -25,14 +15,6 @@ y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_vughy")]
 
-<<<<<<< Updated upstream
-=======
-[node name="Player" parent="." instance=ExtResource("2_sxcof")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(2013, 878)
-
->>>>>>> Stashed changes
 [node name="Placa" parent="." instance=ExtResource("4_8uv08")]
 z_index = 1
 position = Vector2(0, 90)
@@ -52,7 +34,6 @@ position = Vector2(55, 24)
 
 [node name="maca" parent="." instance=ExtResource("9_lxoqi")]
 position = Vector2(20, 47)
-<<<<<<< Updated upstream
 
 [node name="Arvores" type="Node2D" parent="maca"]
 
@@ -67,100 +48,6 @@ position = Vector2(162, -32)
 z_index = 1
 position = Vector2(40, 177)
 
-=======
-
-[node name="Arvores" type="Node2D" parent="maca"]
-
-[node name="Slimes" type="Node2D" parent="."]
-z_index = 1
-
-[node name="Slime2" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(403, 102)
-
-[node name="Slime3" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(39, 306)
-
-[node name="Slime4" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(319, 296)
-
-[node name="Slime5" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(216, 217)
-
-[node name="Slime6" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(815, 52)
-
-[node name="Slime7" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(798, 227)
-
-[node name="Slime8" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1136, 496)
-
-[node name="Slime9" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1745, 446)
-
-[node name="Slime10" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1873, 139)
-
-[node name="Slime11" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1813, -196)
-
-[node name="Slime12" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1022, -505)
-
-[node name="Slime13" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1260, 17)
-
-[node name="Slime14" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1385, 876)
-
-[node name="Slime15" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(925, 876)
-
-[node name="Slime16" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1889, 876)
-
-[node name="Slime17" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(2037, 656)
-
-[node name="Slime18" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(2234, 350)
-
-[node name="Slime19" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(2419, 90)
-
-[node name="Slime20" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(2435, -166)
-
-[node name="Slime21" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(2145, -441)
-
-[node name="Slime22" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1570, -487)
-
-[node name="Slime23" parent="Slimes" instance=ExtResource("8_euh50")]
-position = Vector2(1401, -204)
-
-[node name="Slime" parent="Slimes" instance=ExtResource("8_euh50")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(165, 63)
-speed = 40
-
-[node name="porçãoVerde" parent="Slimes" instance=ExtResource("9_y3x1s")]
-position = Vector2(-12, 49)
-
-[node name="Arvores" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Arvore" parent="Arvores" instance=ExtResource("3_b6nnt")]
-z_index = 1
-position = Vector2(162, -32)
-
-[node name="Arvore2" parent="Arvores" instance=ExtResource("3_b6nnt")]
-z_index = 1
-position = Vector2(40, 177)
-
->>>>>>> Stashed changes
 [node name="Arvore3" parent="Arvores" instance=ExtResource("3_b6nnt")]
 z_index = 1
 position = Vector2(252, 120)
