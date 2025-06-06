@@ -3,6 +3,7 @@ class_name Character
 
 var _state_machine
 var is_attacking: bool = false
+var is_dead: bool = false
 
 @export_category("Variaveis")
 @export var _move_speed: float = 64.0
@@ -20,6 +21,9 @@ func _ready() -> void:
 	
 	
 func _physics_process(_delta: float) -> void:
+	if is_dead:
+		return 
+		
 	move()
 	attack()
 	animate()
@@ -66,4 +70,12 @@ func _on_attack_timer_timeout() -> void:
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
-		body.atualizar_vida(5)
+		body.atualizar_vida()
+
+func die():
+	is_dead = true
+	_state_machine.travel("dead")
+	# Tela de morte e botão renascer para ser feita
+	# espera 1 segundo para reiniciar o jogo novamente
+	await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()

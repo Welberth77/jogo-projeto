@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://btphwa5iruqi1"]
+[gd_scene load_steps=11 format=3 uid="uid://btphwa5iruqi1"]
 
 [ext_resource type="PackedScene" uid="uid://bjs2oe3ogy40c" path="res://Cenas/Terrenos/terrain.tscn" id="1_vughy"]
 [ext_resource type="PackedScene" uid="uid://cia5jgcsa5awt" path="res://Cenas/Terrenos/interior.tscn" id="2_4713r"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bu740n8r20h0n" path="res://Cenas/objetos_coletaveis/maca.tscn" id="7_8uv08"]
 [ext_resource type="PackedScene" uid="uid://b2j71vpa1hy66" path="res://Cenas/objetos_coletaveis/chave.tscn" id="8_y3x1s"]
 [ext_resource type="PackedScene" uid="uid://buulmpn0tgin7" path="res://Cenas/objetos_coletaveis/porção_verde.tscn" id="9_vf1mf"]
+[ext_resource type="PackedScene" uid="uid://busq0fmwk1ine" path="res://Cenas/Enemies/slime.tscn" id="10_y3x1s"]
 
 [node name="Jogo" type="Node2D"]
 
@@ -88,3 +89,6 @@ layer_0/tile_data = PackedInt32Array(196619, 0, 5, 13631605, 0, 5, 14221444, 0, 
 
 [node name="Chave" parent="YSort" instance=ExtResource("8_y3x1s")]
 position = Vector2(4328, 3544)
+
+[node name="Slime" parent="YSort" instance=ExtResource("10_y3x1s")]
+position = Vector2(1712, 1224)

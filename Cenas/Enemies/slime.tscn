@@ -3,23 +3,6 @@
 [ext_resource type="Script" uid="uid://dridsj50a4kar" path="res://Scripts/slime.gd" id="1_0yle5"]
 [ext_resource type="Texture2D" uid="uid://0ik42l5wln75" path="res://Assets/sprites2/characters/slime.png" id="1_i6py8"]
 
-[sub_resource type="Animation" id="Animation_i6py8"]
-resource_name = "idle_down"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
 [sub_resource type="Animation" id="Animation_0yle5"]
 length = 0.001
 tracks/0/type = "value"
@@ -33,22 +16,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_2sviw"]
-resource_name = "walk_rigth"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [28, 29, 30, 31, 32, 33]
 }
 
 [sub_resource type="Animation" id="Animation_q558e"]
@@ -67,12 +34,45 @@ tracks/0/keys = {
 "values": [84, 85, 86, 87, 88]
 }
 
+[sub_resource type="Animation" id="Animation_i6py8"]
+resource_name = "idle_down"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_2sviw"]
+resource_name = "walk_right"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [28, 29, 30, 31, 32, 33]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2sviw"]
 _data = {
 &"RESET": SubResource("Animation_0yle5"),
 &"dead": SubResource("Animation_q558e"),
 &"idle_down": SubResource("Animation_i6py8"),
-&"walk_rigth": SubResource("Animation_2sviw")
+&"walk_right": SubResource("Animation_2sviw")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6py8"]
@@ -81,8 +81,10 @@ size = Vector2(18, 17)
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6py8"]
 radius = 120.017
 
-[node name="Slime" type="CharacterBody2D" groups=["enemy"]]
+[node name="Slime" type="CharacterBody2D" node_paths=PackedStringArray("texture", "animation") groups=["enemy"]]
 script = ExtResource("1_0yle5")
+texture = NodePath("Texture")
+animation = NodePath("AnimationPlayer")
 
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_i6py8")
@@ -104,3 +106,7 @@ shape = SubResource("RectangleShape2D_i6py8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 show_behind_parent = true
 shape = SubResource("CircleShape2D_i6py8")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
