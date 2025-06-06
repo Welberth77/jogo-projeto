@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Character
 
 var _state_machine
 var is_attacking: bool = false

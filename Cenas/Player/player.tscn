@@ -864,6 +864,7 @@ shape = SubResource("RectangleShape2D_yjlpd")
 disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
