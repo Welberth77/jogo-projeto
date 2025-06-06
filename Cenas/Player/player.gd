@@ -5,6 +5,9 @@ var _state_machine
 var is_attacking: bool = false
 var is_dead: bool = false
 
+var max_vida = 100
+@export var vida_player: int = 100
+
 @export_category("Variaveis")
 @export var _move_speed: float = 64.0
 
@@ -23,12 +26,12 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if is_dead:
 		return 
-		
 	move()
 	attack()
 	animate()
 	move_and_slide()
 
+# Movimentação
 func move():
 	var _direction: Vector2 = Vector2(
 		Input.get_axis("move_left", "move_right"),
@@ -47,6 +50,7 @@ func move():
 	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _friccao)
 	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _friccao)
 
+# Ataque
 func attack():
 	if Input.is_action_just_pressed("attack") and is_attacking == false:
 		set_physics_process(false)
@@ -63,6 +67,7 @@ func animate():
 	
 	_state_machine.travel("idle")
 
+
 func _on_attack_timer_timeout() -> void:
 	is_attacking = false
 	set_physics_process(true)
@@ -71,6 +76,11 @@ func _on_attack_timer_timeout() -> void:
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		body.atualizar_vida()
+
+func atualizar_barra_vida():
+	if has_node("Sprite2D/ProgressBar"):
+		var barra = $Sprite2D/ProgressBar
+		barra.value = clamp(vida_player, 0, max_vida)
 
 func die():
 	is_dead = true

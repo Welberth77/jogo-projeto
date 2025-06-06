@@ -1,10 +1,17 @@
-[gd_scene load_steps=41 format=3 uid="uid://vf7x0xbrh6xd"]
+[gd_scene load_steps=44 format=3 uid="uid://vf7x0xbrh6xd"]
 
 [ext_resource type="Script" uid="uid://fjogahpnhb72" path="res://Cenas/Player/player.gd" id="1_8xljj"]
 [ext_resource type="Texture2D" uid="uid://cipssbjd4hgfr" path="res://Assets/sprites2/characters/player.png" id="1_vldss"]
+[ext_resource type="Script" uid="uid://d3pl71qna0yc4" path="res://Scripts/barra_de_vida.gd" id="3_yjlpd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xljj"]
 size = Vector2(12, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xljj"]
+bg_color = Color(0.14, 0.14, 0.14, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjlpd"]
+bg_color = Color(0.76, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_8xljj"]
 length = 0.001
@@ -863,6 +870,22 @@ position = Vector2(-0.5, -17)
 texture = ExtResource("1_vldss")
 hframes = 6
 vframes = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite2D" node_paths=PackedStringArray("player")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.5
+offset_top = -7.0
+offset_right = -13.5
+offset_bottom = -3.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_8xljj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yjlpd")
+value = 60.0
+show_percentage = false
+script = ExtResource("3_yjlpd")
+player = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -4,6 +4,7 @@ class_name Slime
 
 var player_ref = null
 var is_dead: bool = false
+var pode_atacar: bool = true
 
 @export var speed = 40
 @export var vida = 40
@@ -38,7 +39,8 @@ func _physics_process(_delta: float) -> void:
 		
 		if distancia < 20:
 			# Player perde vida
-			player_ref.die()
+			# função para tirar a vida do player
+			causar_dano(player_ref)
 			
 		velocity = direcao * speed
 		move_and_slide()
@@ -59,6 +61,22 @@ func atualizar_vida():
 	is_dead = true
 	animation.play("dead")
 
-
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	queue_free()
+	if anim_name == "dead":
+		queue_free()
+
+
+func causar_dano(player_ref):
+	if pode_atacar and not player_ref.is_dead:
+		pode_atacar = false  # evita dano contínuo sem intervalo
+		player_ref.vida_player -= dano
+		player_ref.atualizar_barra_vida()  # ✅ chamada para atualizar a barra visual
+
+		# se a vida zerar, o player morre
+		if player_ref.vida_player <= 0:
+			player_ref.die()
+
+		# espera 1 segundo para poder atacar novamente
+		await get_tree().create_timer(1.0).timeout
+		pode_atacar = true  # libera novo ataque
+	
