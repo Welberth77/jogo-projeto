@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://daoavmw1lw6mw"]
+
+[ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_m3y5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3y5q"]
+size = Vector2(12, 11)
+
+[node name="Placa" instance=ExtResource("1_m3y5q")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_m3y5q")

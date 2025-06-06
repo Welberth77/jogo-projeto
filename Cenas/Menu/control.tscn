@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://b875f1b78am3l"]
+
+[ext_resource type="FontFile" uid="uid://cflvi8an5nnsb" path="res://Cenas/Menu/CCElephantmenAged-Regular.otf" id="1_suxjh"]
+[ext_resource type="Texture2D" uid="uid://3krehhtye8ad" path="res://Assets/Sprites1/Cenário/Outside/Outside_21_1.png" id="1_vwt2n"]
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vwt2n")
+
+[node name="Label" type="Label" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.5
+offset_top = 50.0
+offset_right = 172.5
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_suxjh")
+theme_override_font_sizes/font_size = 100
+text = "O Retorno de Tonho"
+
+[node name="Jogar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.451042
+anchor_top = 0.47037
+anchor_right = 0.549479
+anchor_bottom = 0.52963
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_suxjh")
+theme_override_font_sizes/font_size = 50
+text = "Jogar"
+metadata/_edit_use_anchors_ = true
+
+[node name="Opções" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.441406
+anchor_top = 0.567593
+anchor_right = 0.559115
+anchor_bottom = 0.626852
+offset_left = 18.5008
+offset_right = -18.5008
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_suxjh")
+theme_override_font_sizes/font_size = 50
+text = "Opções"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.451042
+anchor_top = 0.667593
+anchor_right = 0.549479
+anchor_bottom = 0.726852
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_suxjh")
+theme_override_font_sizes/font_size = 50
+text = "Sair"
+metadata/_edit_use_anchors_ = true

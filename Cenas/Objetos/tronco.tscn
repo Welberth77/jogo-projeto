@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gle6ov4mlyrp"]
+
+[ext_resource type="PackedScene" uid="uid://cgruovlcp70y8" path="res://Cenas/Objetos/objeto.tscn" id="1_6psvg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy2le"]
+size = Vector2(22, 19)
+
+[node name="Tronco" instance=ExtResource("1_6psvg")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(160, 112, 32, 32)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_gy2le")

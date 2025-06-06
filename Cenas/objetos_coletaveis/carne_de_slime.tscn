@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://u4tioal2vfgn"]
+
+[ext_resource type="PackedScene" uid="uid://bu740n8r20h0n" path="res://Cenas/objetos_coletaveis/maca.tscn" id="1_02hkp"]
+[ext_resource type="Texture2D" uid="uid://caqiytfc516nm" path="res://Assets/sprite_items/PNG/18.png" id="2_8lft5"]
+
+[node name="CarneDeSlime" instance=ExtResource("1_02hkp")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8lft5")

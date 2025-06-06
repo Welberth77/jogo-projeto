@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhdh8q80orfbj"]
+
+[ext_resource type="Texture2D" uid="uid://dh6bciepptm2t" path="res://Assets/sprites2/objects/objects.png" id="1_uy484"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eibj6"]
+resource_name = "Objects"
+texture = ExtResource("1_uy484")
+0:5/size_in_atlas = Vector2i(3, 4)
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, 18)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.511, -8.09364, 11.3311, -7.91378, 11.1512, 7.91378, -11.6908, 7.73393)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.80221, -1.52288, 7.10679, -1.62441, 7.00367, 3.46716, -6.93433, 3.25913)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.75644, -0.913731, 4.7717, -1.01526, 4.97475, 6.39611, -3.55339, 6.29458)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, 2)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.81971, 0.114617, 6.93433, 0.171926, 6.93433, 6.01739, -6.76241, 6.18932)
+11:2/size_in_atlas = Vector2i(1, 2)
+11:2/0 = 0
+6:7/size_in_atlas = Vector2i(2, 2)
+6:7/0 = 0
+6:7/0/texture_origin = Vector2i(0, 4)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.9283, -0.652885, 14.3635, -0.870516, 14.1459, 13.493, -14.1459, 13.493)
+8:6/size_in_atlas = Vector2i(2, 3)
+8:6/0 = 0
+8:6/0/texture_origin = Vector2i(0, 14)
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.16327, -24.4898, 8.4266, -24.2265, 8, 6.09439, -8, 6.09439)
+10:7/size_in_atlas = Vector2i(2, 2)
+10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.89223, -3.0576, 8, -3.23746, 11.3311, 2.69788, 8, 8, -5.2159, 8, -9.71237, 5.2159)
+10:0/size_in_atlas = Vector2i(2, 1)
+10:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q4kut"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_eibj6")
+
+[node name="ObjectsTerrain" type="TileMap"]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_q4kut")
+format = 2
+layer_0/y_sort_enabled = true
