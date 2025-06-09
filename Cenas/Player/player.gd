@@ -9,7 +9,7 @@ var max_vida = 100
 @export var vida_player: int = 100
 
 @export_category("Variaveis")
-@export var _move_speed: float = 64.0
+@export var _move_speed: float = 80.0
 
 @export var _aceleracao: float = 0.4
 @export var _friccao: float = 0.8 
