@@ -70,7 +70,7 @@ func causar_dano(player_ref):
 	if pode_atacar and not player_ref.is_dead:
 		pode_atacar = false  # evita dano contínuo sem intervalo
 		player_ref.vida_player -= dano
-		player_ref.atualizar_barra_vida()  # ✅ chamada para atualizar a barra visual
+		player_ref.atualizar_barra_vida()  # chamada para atualizar a barra visual
 
 		# se a vida zerar, o player morre
 		if player_ref.vida_player <= 0:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmn3hu4yquhbj"
-path="res://.godot/imported/13.png-70e4fe766aeda95bcf16b5671cc383c1.ctex"
+uid="uid://cyminxy7aej2a"
+path="res://.godot/imported/pocaoVerde.png-2e0cae586941e432975682ff92edc8dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprite_items/PNG/13.png"
-dest_files=["res://.godot/imported/13.png-70e4fe766aeda95bcf16b5671cc383c1.ctex"]
+source_file="res://Assets/sprite_items/PNG/pocaoVerde.png"
+dest_files=["res://.godot/imported/pocaoVerde.png-2e0cae586941e432975682ff92edc8dd.ctex"]
 
 [params]
 

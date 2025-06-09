@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://buulmpn0tgin7"]
 
 [ext_resource type="PackedScene" uid="uid://bu740n8r20h0n" path="res://Cenas/objetos_coletaveis/maca.tscn" id="1_g6l6c"]
-[ext_resource type="Texture2D" uid="uid://cyminxy7aej2a" path="res://Assets/sprite_items/PNG/24.png" id="2_xtiaf"]
+[ext_resource type="Texture2D" uid="uid://cyminxy7aej2a" path="res://Assets/sprite_items/PNG/pocaoVerde.png" id="2_xtiaf"]
 
 [node name="porçãoVerde" instance=ExtResource("1_g6l6c")]
 

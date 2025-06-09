@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="O Retorno de Tonho"
-run/main_scene="res://Cenas/cena_player.tscn"
+run/main_scene="uid://btphwa5iruqi1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 Stashedchangesconfig/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+Inventory="*res://Scripts/inventory.gd"
 
 [display]
 
